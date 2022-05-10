@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    margin: 0;
+    background-color: #fffe;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    box-shadow: 0 0 2px #777;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    position: relative;
+    display: grid;
+    margin: 0 6rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 100px 1fr auto;
+    justify-content: center;
+    align-items: center;
+}
+main .card-img{
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    margin: 0;
+    place-self: center;
+    padding: 10px;
+    justify-content: center;
+    position: relative;
+}
+main img{
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+main .musica{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin: 0;
+}
+.musica button{
+    margin: 0 10px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: #EE2D7F ;
+    border: none;
+    border-radius: 10px;
+}
+.musica button:hover{
+    transform: scale(1.2);
+}
+main .container{
+    position: relative;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+main .text-poem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 50px 0;
+}
+.text-poem p{
+    margin: 10px 0;
+}
+.corazon {
+    bottom: 0;
+    width:100px;
+    height:100px;
+    background-color:red;
+    animation-name: latir;
+    animation-duration: .5s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    position:relative;
+    transform:rotate(-45deg);
+}
+
+.corazon::before, .corazon::after{
+  width:100%;
+  height:100%;
+  background-color:inherit;
+  content:'';
+  position:absolute;
+  top:-50%;
+  border-radius:50%;
+}
+
+.corazon::before{
+  top:0;
+  right:-50%;
+}
+
+.corazon:hover {
+  animation-play-state:paused;
+}
+
+@keyframes latir {
+  100% {
+    transform:rotate(-45deg) scale(1.2);
+    
+  }
+}
+
+/*party*/
+#drawing_canvas {
+    position: absolute;
+    margin: auto;
+    width: 512px;
+    height: 350px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
