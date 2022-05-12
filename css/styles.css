@@ -5,7 +5,7 @@
 }
 html, body{
     margin: 0;
-    background-color: #fffe;
+    background-color: #FDEDEC;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -14,9 +14,11 @@ header{
     height: 4rem;
     display: flex;
     align-items: center;
+    background-color: #EC7063;
     justify-content: center;
     position: sticky;
-    box-shadow: 0 0 2px #777;
+    color: white;
+    box-shadow: 0 0 5px #EC7063;
 }
 
 nav{
@@ -132,4 +134,36 @@ main .text-poem{
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+@media(max-width:700px){
+    header{
+        width: 100vw;
+        margin: 0;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    main .card-img{
+        height: auto;
+        margin: 10px auto;
+        padding: 0;
+    }
+    main .videos{
+        width: inherit;
+    }
+    .videos iframe{
+        width: 95vw;
+    }
+    main .musica{
+        height: 200px;
+    }
+    main .container{
+        height: 200px;
+    }
+    main .text-poem{
+        width: 200px;
+    }
 }
